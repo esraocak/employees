@@ -3,23 +3,25 @@
     padding: 0;
     box-sizing: border-box;
   }
-  body {
-    height: 100%;
-  }
+
   .App {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 850px;
+    height: 100vh;
+    background: rgb(2,0,36);
+    background: linear-gradient(141deg, rgba(2,0,36,1) 0%, rgba(108,9,121,1) 35%, rgba(0,212,255,1) 100%);
 
   }
   .container {
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    width: 35%;
-    height: 750px;
+    width: 30%;
+    height: 100%;
+    margin: 25px;
+    border-radius: 10px;
   }
 
 
@@ -27,5 +29,60 @@
         text-align: center;
         margin: 2rem;
         color:black;
+        height: 10%;
+      
   }
 
+    .cards{
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+      padding: 1rem;
+     
+      
+    }
+    .card{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: left;
+      align-items: center;
+      text-align: center;
+      background-color:azure;
+      border:dotted 1px rgb(173, 89, 184);
+      border-radius: 5px;
+      
+    }
+    .image{
+      width:40%;
+      height: 40%;
+    
+    }
+    .image img{
+      width:50%;
+      height:50%;
+      border-radius: 50%;
+      
+    }
+
+    .title{
+      width: 40%;
+      height: 50%;
+      text-align: left;
+    }
+    .name{
+      font-weight: bold;
+    }
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    button {
+      border: 1px solid rgba(2, 0, 36, 1);
+      background: rgb(2,0,36);
+      background: linear-gradient(141deg, rgba(2,0,36,1) 0%, rgba(108,9,121,1) 35%, rgba(0,212,255,1) 100%);
+      width: 140px;
+      height: 40px;
+      margin: 0.8rem;
+      border-radius: 10px;
+    }

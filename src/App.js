@@ -33,7 +33,9 @@ function App() {
     <div className="App">
       <div className="container">
         <Header count={count} />
-        <Card count={count} />
+        <div className="cards">
+          <Card count={count} />
+        </div>
         <Button click={handleClick} />
       </div>
       
