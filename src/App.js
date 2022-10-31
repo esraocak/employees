@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import {useState} from "react";
+import Header from "./components/header";
+import Card from "./components/card";
+import Button from "./components/buttons";
 
 function App() {
+  const [count,setCount]=useState(1)
+  const handleClick = (e) =>{ 
+    if (e.target.value === "Next") {
+      if (count >=0 && count <=11 ) {
+        setCount(count + 5)
+      }
+      else if (count >=15) {
+      setCount (1)
+      }
+   }
+
+    if (e.target.value === "Prew") {
+      if (count > 1) {
+        setCount(count - 5)
+      }
+
+      else if (count <= 1) {
+        setCount(16)
+
+      }
+    }
+
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container">
+        <Header count={count} />
+        <Card count={count} />
+        <Button click={handleClick} />
+      </div>
+      
     </div>
   );
 }
